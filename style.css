@@ -1,0 +1,106 @@
+.b1 {
+    height: 100vh;
+    /*background: linear-gradient(#99f,#f99);*/
+    background: url(2.jpg) no-repeat center;
+    background-size: cover;
+}
+
+body,
+.navbar,
+.navbar ul {
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+
+}
+
+.navbar {
+    position: relative;
+    padding: 20px;
+    border-radius: 50px;
+    background: linear-gradient(30deg,#99f,#f99);
+}
+
+.navbar input {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    opacity: 0;
+}
+
+.navbar span {
+    position: absolute;
+    left: 25px;
+    top: calc( 50% - 10px);
+    width: 30px;
+    height: 4px;
+    border-radius: 15px;
+    background-color: #fff;
+    pointer-events: none;
+    transition: transform 0.3s ease-in-out 0.3s,top 0.3s ease-in-out 0.3s;
+}
+
+.navbar span:nth-child(3) {
+    top: calc(50% + 6px);
+}
+
+.navbar ul {
+    width: 0;
+    overflow: hidden;
+    transition: all 0.5s;
+    white-space: nowrap;
+}
+
+.navbar ul li {
+    list-style: none;
+    margin: 0 15px;
+
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 700;
+    color: #333;
+}
+
+.navbar ul li a:hover {
+    color: #fb7299;
+}
+
+.navbar input:checked ~ ul {
+    width: 350px;
+}
+
+.navbar input:checked ~ span:nth-child(2) {
+        top: calc(50% - 2px);
+        transform: rotate(-45deg);
+        background-color: #fb7299;
+        transition: top 0.3s ease-in-out 0.3s,transform 0.3s ease-in-out 0.3s;
+}
+
+.navbar input:checked ~ span:nth-child(3) {
+    top: calc(50% - 2px);
+    transform: rotate(45deg);
+    background-color: #fb7299;
+    transition: top 0.3s ease-in-out 0.3s,transform 0.3s ease-in-out 0.3s;
+}
+
+.logo img {
+    width: 100%;
+}
+
+.logo {
+    width: 150px;
+    height: 150px;
+    border: 5px gray solid;
+    border-radius: 50%;
+    margin: 20px auto;
+    overflow: hidden;
+}
+
+.logo {
+    position: absolute;
+    top: 15%;
+}
